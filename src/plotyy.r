@@ -279,6 +279,11 @@ plotyy <- function(
     response
 }
 
+plot_csv <- function(fname, ...) {
+  csv = read.csv(fname, header = FALSE)
+  r = plotyy(list(csv), ...)
+}
+
 
 setup <- function() {
     palette_setup();
